@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <!-- ✏️ You can edit this part: Main Website Title -->
     <title>Hello My Love! Open This When Your Heart Misses Me.</title>
     
+    <!-- Open Graph (OG) Tags for Link Preview on Messenger/Facebook -->
     <meta property="og:title" content="A Special Message For You, My Love ❤️">
     <meta property="og:description" content="Open this link when you're thinking of me. It has a special surprise! ✨">
     
+    <!-- ✏️ You can edit this part: The image URL for the link preview (MUST be a public HTTPS link) -->
     <meta property="og:image" content="https://via.placeholder.com/1200x630/ADD8E6/FFFFFF?text=For+You+My+Love"> 
     <meta property="og:url" content="https://yourusername.github.io/your-project-name/index.html">
     <meta property="og:type" content="website">
@@ -53,7 +56,6 @@
         /* ==================== ICON GRID (HOMEPAGE) ==================== */
         .icon-grid {
             display: grid;
-            /* Now 3 columns on larger screens, 2 on small screens */
             grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); 
             gap: 25px;
             margin-top: 30px;
@@ -64,12 +66,12 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background-color: #ffe0f0; /* Light pink background for icons */
+            background-color: #ffe0f0; 
             padding: 20px;
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
-            cursor: pointer; /* Indicates it's clickable */
+            cursor: pointer; 
             /* ✏️ You can edit this part: Icon text color */
             color: #6a4a7a; 
             font-weight: bold;
@@ -90,15 +92,15 @@
         
         /* ==================== MODAL STYLES ==================== */
         .modal {
-            display: none;
+            display: none; 
             position: fixed;
-            z-index: 1000;
+            z-index: 1000; 
             left: 0;
             top: 0;
             width: 100%;
             height: 100%;
             overflow: auto;
-            background-color: rgba(0, 0, 0, 0.4);
+            background-color: rgba(0, 0, 0, 0.4); 
             padding-top: 60px;
         }
 
@@ -111,10 +113,11 @@
             max-width: 700px;
             position: relative;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            max-height: 80vh; 
+            overflow-y: auto;
         }
 
         .close-btn {
-            /* ✏️ You can edit this part: Close button color */
             color: #aaa;
             float: right;
             font-size: 38px;
@@ -135,17 +138,15 @@
         }
         
         .modal-content h2 {
-            /* ✏️ You can edit this part: Modal heading text color */
             color: #7b4c8a; 
             margin-bottom: 20px;
             font-size: 2em;
             padding-right: 30px; 
         }
 
-
         /* ==================== MODAL SPECIFIC STYLES ==================== */
-
-        /* COUNTDOWN STYLES (Keeping them clean) */
+        
+        /* COUNTDOWN STYLES */
         .countdown-timer { display: flex; justify-content: center; gap: 15px; margin-top: 20px; flex-wrap: wrap; }
         .timer-box { background-color: #a76fb8; color: #fff; padding: 15px 25px; border-radius: 10px; font-size: 1.8em; font-weight: bold; min-width: 100px; text-align: center; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); }
         .timer-box span { display: block; font-size: 0.5em; margin-top: 5px; font-weight: normal; opacity: 0.8; }
@@ -174,60 +175,35 @@
         .flower-item { position: relative; overflow: hidden; border-radius: 10px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); transition: transform 0.2s ease; }
         .flower-item:hover { transform: scale(1.03); }
         .flower-item img { width: 100%; height: 150px; object-fit: cover; display: block; border-radius: 10px; }
-        
-        /* -------------------- NEW: MEMORY VAULT STYLES -------------------- */
-        .vault-form input[type="text"], 
-        .vault-form textarea {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 15px;
-            border: 2px solid #dcbfe6; /* Light purple border */
-            border-radius: 8px;
-            font-size: 1em;
-            resize: vertical; /* Allows vertical resizing for textarea */
-            outline: none;
-            transition: border-color 0.3s;
-        }
 
-        .vault-form input[type="text"]:focus,
-        .vault-form textarea:focus {
-            border-color: #a76fb8; /* Deep purple on focus */
-        }
-        
-        .vault-form textarea {
-            min-height: 100px;
-        }
-
-        .vault-submit-button {
-            /* ✏️ You can edit this part: Submit button background color */
-            background-color: #7b4c8a; 
-            color: white;
-            padding: 12px 30px;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.1em;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .vault-submit-button:hover {
-            background-color: #5c3b6e;
-        }
-        
-        #confirmation-message {
+        /* -------------------- NEW: REASONS LIST STYLES -------------------- */
+        .reasons-list {
+            background-color: #fff0f5; /* Light pink background */
+            padding: 20px;
+            border-radius: 10px;
             margin-top: 15px;
-            color: #1DB954; /* Green for success */
-            font-weight: bold;
-            display: none;
+            text-align: left;
         }
-        
+
+        .reason-item {
+            /* ✏️ You can edit this part: Reason item text color */
+            color: #5c3b6e;
+            font-size: 1.1em;
+            padding: 8px 0;
+            border-bottom: 1px dotted #dcbfe6; /* Dotted separator */
+        }
+        .reason-item:last-child {
+            border-bottom: none; /* No border on the last item */
+            font-weight: bold; /* Highlight the last reason */
+        }
+
+
         /* ==================== RESPONSIVE DESIGN ==================== */
         @media (max-width: 768px) {
             h1 { font-size: 2.2em; }
             .modal-content { margin: 5% auto; padding: 20px; }
             .timer-box { font-size: 1.5em; padding: 12px 20px; }
-            .icon-grid { grid-template-columns: repeat(3, 1fr); /* Default 3-column layout on medium screens */ }
+            .icon-grid { grid-template-columns: repeat(3, 1fr); }
             .icon-item img { width: 50px; height: 50px; }
             .flower-grid { grid-template-columns: repeat(2, 1fr); }
             .flower-item img { height: 120px; }
@@ -235,9 +211,9 @@
 
         @media (max-width: 480px) {
             h1 { font-size: 1.8em; }
-            .icon-grid { grid-template-columns: repeat(2, 1fr); /* 2 columns on small screens */ }
+            .icon-grid { grid-template-columns: repeat(2, 1fr); }
             .timer-box { font-size: 1.2em; }
-            .love-letter-content p, .note-content { font-size: 1em; }
+            .love-letter-content p, .note-content, .reason-item { font-size: 1em; }
         }
 
     </style>
@@ -246,46 +222,64 @@
 
     <div class="container">
 
+        <!-- WELCOME SECTION (MAIN VIEW) -->
         <div class="welcome-section">
             
+            <!-- ✏️ You can edit this part: Main welcome heading -->
             <h1>Hello my love! <br> Open these when your heart misses me.</h1>
             
             <div class="icon-grid">
                 
+                <!-- Countdown Button -->
                 <a class="icon-item" onclick="openModal('countdown-modal')">
+                    <!-- ✏️ You can edit this part: Icon image URL -->
                     <img src="https://raw.githubusercontent.com/Anmol-singh007/Images/main/Hourglass.png" alt="Countdown">
                     <span>Countdown</span>
                 </a>
                 
+                <!-- Love Letter Button -->
                 <a class="icon-item" onclick="openModal('love-letter-modal')">
+                    <!-- ✏️ You can edit this part: Icon image URL -->
                     <img src="https://raw.githubusercontent.com/Anmol-singh007/Images/main/Envelope.png" alt="Love Letter">
                     <span>Love Letter</span>
                 </a>
                 
+                <!-- Notes Button -->
                 <a class="icon-item" onclick="openModal('notes-modal')">
+                    <!-- ✏️ You can edit this part: Icon image URL -->
                     <img src="https://raw.githubusercontent.com/Anmol-singh007/Images/main/Note-icon.png" alt="Notes">
                     <span>Notes</span>
                 </a>
                 
+                <!-- Playlist Button -->
                 <a class="icon-item" onclick="openModal('playlist-modal')">
+                    <!-- ✏️ You can edit this part: Icon image URL -->
                     <img src="https://raw.githubusercontent.com/Anmol-singh007/Images/main/Headphones.png" alt="Playlist">
                     <span>Playlist</span>
                 </a>
                 
+                <!-- Flowers Button -->
                 <a class="icon-item" onclick="openModal('flowers-modal')">
+                    <!-- ✏️ You can edit this part: Icon image URL -->
                     <img src="https://raw.githubusercontent.com/Anmol-singh007/Images/main/Rose.png" alt="Flowers">
                     <span>Flowers</span>
                 </a>
                 
-                <a class="icon-item" onclick="openModal('vault-modal')">
-                    <img src="https://raw.githubusercontent.com/Anmol-singh007/Images/main/Heart-Lock.png" alt="Memory Vault">
-                    <span>Memory Vault</span>
+                <!-- NEW: Reasons Why I Love You Button -->
+                <a class="icon-item" onclick="openModal('reasons-modal')">
+                    <!-- ✏️ You can edit this part: Icon image URL for the new button -->
+                    <img src="https://raw.githubusercontent.com/Anmol-singh007/Images/main/Heart-Lock.png" alt="Reasons I Love You">
+                    <span>Reasons I Love You</span>
                 </a>
                 
             </div>
         </div>
+        
     </div> 
 
+    <!-- ==================== MODAL STRUCTURES ==================== -->
+
+    <!-- 1. COUNTDOWN MODAL -->
     <div id="countdown-modal" class="modal">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal('countdown-modal')">×</span>
@@ -297,11 +291,13 @@
                 <div class="timer-box" id="seconds">00<span>SECONDS</span></div>
             </div>
             <p class="countdown-message">
+                <!-- ✏️ You can edit this part: Countdown supportive message -->
                 Every second that passes brings me closer to the day I'll finally see you again. It might be a long wait, but every sunrise and every night under the same sky reminds me that love doesn't fade with distance—it only grows stronger. So until that day comes, I'll keep counting, smiling, and loving you from afar.
             </p>
         </div>
     </div>
 
+    <!-- 2. LOVE LETTER MODAL -->
     <div id="love-letter-modal" class="modal">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal('love-letter-modal')">×</span>
@@ -309,6 +305,7 @@
             <div class="love-letter-content">
                 <h3>My Love,</h3>
                 <p>
+                    <!-- ✏️ You can edit this part: Love Letter content -->
                     The distance might test us, but it will never break us. This countdown is more than just numbers; it's a reminder of the love that keeps growing even when we're apart. Two years from now, when the final second ends, I'll be right where I've always wanted to be: Standing in front of you, holding you close, whispering "I love you" a million times. Every memory we've made is a treasure, and every future moment we dream of keeps my heart full. Remember our first date? The way we laughed until our stomachs hurt? Those moments are etched into my soul. I carry your smile with me every day, and your voice is the sweetest melody in my thoughts.
                     <br><br>
                     Thank you for being you, for your patience, your understanding, and your unwavering love. You are my sunshine, my moon, and all my stars. You make every day brighter, and every challenge worth overcoming. Just thinking of you brings a warmth to my chest that banishes any loneliness. I can't wait for the day when these screens are replaced by your embrace, and we can finally start making new memories side by side, forever.
@@ -321,32 +318,39 @@
         </div>
     </div>
 
+    <!-- 3. NOTES MODAL -->
     <div id="notes-modal" class="modal">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal('notes-modal')">×</span>
             <h2>A Quick Note</h2>
             <div class="note-container">
+                <!-- ✏️ You can edit this part: Note Date -->
                 <p class="note-date">Date: October 6, 2024</p>
                 <div class="note-content">
+                    <!-- ✏️ You can edit this part: Note Message -->
                     Goodluck on your exams today baby!<br>You can do it! ✨ I believe in you! Sending all my positive vibes and strength your way. Remember all your hard work, you're so smart and capable. Go show them what you're made of! Can't wait to celebrate your success with you! ❤️
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- 4. PLAYLIST MODAL -->
     <div id="playlist-modal" class="modal">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal('playlist-modal')">×</span>
             <h2>Our Love Playlist</h2>
             <div class="playlist-info">
                 <div class="playlist-note">
-                    Note:<br>these are the songs that reminds me of you <3
+                    <!-- ✏️ You can edit this part: Playlist Note -->
+                    Note:<br>these are the songs on our playlist <3
                 </div>
                 
                 <div class="spotify-embed">
+                    <!-- ✏️ You can edit this part: Spotify Embed Code (Replace the whole iframe) -->
                     <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5RF35w1gbtUy3Gah4xkgYR?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                 </div>
                 
+                <!-- ✏️ You can edit this part: Spotify Link URL -->
                 <a href="https://open.spotify.com/playlist/37i9dQZF1DXcBWIGoYBM5M" target="_blank" class="spotify-link-button">
                     Open on Spotify
                 </a>
@@ -354,51 +358,57 @@
         </div>
     </div>
 
+    <!-- 5. FLOWERS MODAL -->
     <div id="flowers-modal" class="modal">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal('flowers-modal')">×</span>
             <h2>Flowers for you, my love</h2>
             <div class="flower-grid">
                 
-                <div class="flower-item"><img src="https://share.google/images/U1pKD6UgiSKeEy5fe" alt="Flower 1"></div>
+                <!-- ✏️ You can edit this part: Flower Image 1 URL -->
+                <div class="flower-item"><img src="https://raw.githubusercontent.com/Anmol-singh007/Images/main/Flower%201.jpg" alt="Flower 1"></div>
                 
+                <!-- ✏️ You can edit this part: Flower Image 2 URL -->
                 <div class="flower-item"><img src="https://raw.githubusercontent.com/Anmol-singh007/Images/main/Flower%202.jpg" alt="Flower 2"></div>
                 
+                <!-- ✏️ You can edit this part: Flower Image 3 URL -->
                 <div class="flower-item"><img src="https://raw.githubusercontent.com/Anmol-singh007/Images/main/Flower%203.jpg" alt="Flower 3"></div>
                 
+                <!-- ✏️ You can edit this part: Flower Image 4 URL -->
                 <div class="flower-item"><img src="https://raw.githubusercontent.com/Anmol-singh007/Images/main/Flower%204.jpg" alt="Flower 4"></div>
                 
+                <!-- ✏️ You can edit this part: Flower Image 5 URL -->
                 <div class="flower-item"><img src="https://raw.githubusercontent.com/Anmol-singh007/Images/main/Flower%205.jpg" alt="Flower 5"></div>
                 
+                <!-- ✏️ You can edit this part: Flower Image 6 URL -->
                 <div class="flower-item"><img src="https://raw.githubusercontent.com/Anmol-singh007/Images/main/Flower%206.jpg" alt="Flower 6"></div>
                 
             </div>
         </div>
     </div>
     
-    <div id="vault-modal" class="modal">
+    <!-- 6. NEW: REASONS WHY I LOVE YOU MODAL -->
+    <div id="reasons-modal" class="modal">
         <div class="modal-content">
-            <span class="close-btn" onclick="closeModal('vault-modal')">×</span>
-            <h2>Memory Vault</h2>
-            <p>Write down a favorite shared memory or a quick message for me to find later!</p>
-            
-            <form id="memory-form" class="vault-form">
-                <input type="text" id="memory-title" placeholder="A Title for this Memory (e.g., Our First Date)" required>
-                
-                <textarea id="memory-text" placeholder="Tell me what you remember and how it made you feel..." required></textarea>
-                
-                <button type="submit" class="vault-submit-button">Seal the Memory</button>
-            </form>
-            
-            <p id="confirmation-message">
-                Memory sealed! I'll cherish this message until we're together again. Thank you! ❤️
-            </p>
+            <span class="close-btn" onclick="closeModal('reasons-modal')">×</span>
+            <h2>Reasons Why I Love You</h2>
+            <div class="reasons-list">
+                <!-- ✏️ You can edit this part: Add your reasons here! -->
+                <p class="reason-item">1. You make me laugh harder than anyone else.</p>
+                <p class="reason-item">2. You never let me forget how much I'm loved.</p>
+                <p class="reason-item">3. The way you look at me makes the whole world stop.</p>
+                <p class="reason-item">4. You're my best friend and my greatest adventure.</p>
+                <p class="reason-item">5. You always know how to make my favorite meal after a long day.</p>
+                <p class="reason-item">6. Because you are simply, beautifully, you.</p>
+            </div>
         </div>
     </div>
 
 
 <script>
-    // ==================== JAVASCRIPT FOR MODALS AND COUNTDOWN ====================
+    // =========================================================
+    // MODAL AND COUNTDOWN LOGIC 
+    // =========================================================
 
     // Function to open a specific modal
     function openModal(modalId) {
@@ -407,11 +417,7 @@
 
     // Function to close a specific modal
     function closeModal(modalId) {
-        // Reset the form and hide the confirmation message when closing the vault modal
-        if (modalId === 'vault-modal') {
-            document.getElementById('memory-form').reset();
-            document.getElementById('confirmation-message').style.display = "none";
-        }
+        // Since we are not using the database/form anymore, we just close the modal.
         document.getElementById(modalId).style.display = "none";
     }
 
@@ -422,22 +428,10 @@
         }
     }
 
-    // NEW: Handle the Memory Vault form submission (prevents actual submission and shows a success message)
-    document.getElementById('memory-form').addEventListener('submit', function(e) {
-        e.preventDefault(); // Stop the form from trying to submit and refresh the page
-        
-        // Hide the form and show the confirmation message
-        document.getElementById('memory-form').style.display = "none";
-        document.getElementById('confirmation-message').style.display = "block";
-
-        // Optional: You could theoretically send this data using a service like Formspree or Netlify forms, but for this static file, we just show a message.
-        console.log("Memory captured by the form, but not saved anywhere (static site).");
-    });
-
 
     // Countdown Timer Logic
     // ✏️ You can edit this part: Set the date and time you want to count down to
-    const countdownDate = new Date("October 30, 2025 00:00:00").getTime(); 
+    const countdownDate = new Date("December 25, 2026 00:00:00").getTime(); 
 
     const countdownFunction = setInterval(function() {
         const now = new Date().getTime(); 
